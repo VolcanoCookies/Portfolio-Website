@@ -2,7 +2,7 @@
 /* CSS Document */
 
 .nav-bar {
-	background-color: #FF2A2D;
+	background-color: #FF4447;
 	display: block;
 	height: 58px;
 }
@@ -18,8 +18,8 @@
 	border: solid #1F1F1F 2px;
 	border-radius: 5px;
 	margin-top: 12px;
-	margin-left: 25px;
-	margin-right: 25px;
+	margin-left: 0px;
+	margin-right:25px;
 	background-color: #E1E1E1;
 }
 
