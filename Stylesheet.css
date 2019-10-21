@@ -2,7 +2,7 @@
 /* CSS Document */
 
 body {
-	background-color: gray;
+	background-color: dimgray;
 }
 
 /* Content */
@@ -24,7 +24,64 @@ body {
 	margin-top: 10px;
 	font-family: Arial, Helvetica, Gotham;
 	font-style: bolder;
+}
+
+/* Project */
+
+.project-list {
+	list-style-type: none;
+	overflow: hidden;
+	magin: 0px;
+	padding: 0px;
+	float: left;
+}
+
+.project-list-item {
+	background-color: white;
+	border-radius: 15px;
 	display: inline-block;
+	border: black solid 1px;
+	margin: -1px 9px;
+	height: 250px;
+	width: 250px;
+	vertical-align: middle;
+}
+
+.project-image {
+	display: inline;
+	margin: auto;
+	width: inherit;
+	border-radius: 15px;
+}
+
+.project-title {
+	font-family: Gotham, "Helvetica Neue", Helvetica, Arial, "sans-serif";
+	text-align: center;
+	margin: 10px
+}
+
+.project-description {
+	font-family: Gotham, "Helvetica Neue", Helvetica, Arial, "sans-serif";
+	color: lightslategray;
+	font-size: 0.85em;
+	text-align: center;
+	display: none;
+}
+
+.project-hr-top {
+	display: block;
+}
+
+.project-list-item:hover .project-description {
+	display: flex;
+}
+
+.project-list-item:hover .project-image {
+	display: none;
+}
+
+.project-list-item:hover .project-hr-top {
+	display: none;
 }
 
 /* Navbar */
@@ -49,6 +106,10 @@ body {
 	margin-left: 0px;
 	margin-right:25px;
 	background-color: #E1E1E1;
+}
+
+.nav-item:hover {
+	background-color: #B4B4B4;
 }
 
 .nav-link {
