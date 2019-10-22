@@ -30,7 +30,6 @@ body {
 
 .project-list {
 	list-style-type: none;
-	overflow: hidden;
 	magin: 0px;
 	padding: 0px;
 	float: left;
@@ -45,6 +44,7 @@ body {
 	height: 250px;
 	width: 250px;
 	vertical-align: middle;
+	overflow: hidden;
 }
 
 .project-image {
@@ -52,36 +52,45 @@ body {
 	margin: auto;
 	width: inherit;
 	border-radius: 15px;
+	transition: opacity 0.25s;
+	transition-timing-function: ease-in-out;
 }
 
 .project-title {
 	font-family: Gotham, "Helvetica Neue", Helvetica, Arial, "sans-serif";
 	text-align: center;
-	margin: 10px
+	margin: 10px;
+	position: relative;
+	top: 0px;
+	transition: top .5s;
+	transition-timing-function: ease-out;
 }
 
 .project-description {
+	display: flex;
 	font-family: Gotham, "Helvetica Neue", Helvetica, Arial, "sans-serif";
 	color: lightslategray;
 	font-size: 0.85em;
 	text-align: center;
-	display: none;
-}
-
-.project-hr-top {
-	display: block;
+	position: relative;
+	top: 0px;
+	transition: top .5s;
+	transition-timing-function: ease-out;
 }
 
 .project-list-item:hover .project-description {
-	display: flex;
+	position: relative;
+	top: -205px;
 }
 
 .project-list-item:hover .project-image {
-	display: none;
+	display: inline;
+	opacity: 0.1;
 }
 
-.project-list-item:hover .project-hr-top {
-	display: none;
+.project-list-item:hover .project-title {
+	position: relative;
+	top: -205px;
 }
 
 /* Navbar */
@@ -99,17 +108,15 @@ body {
 
 .nav-item {
 	display: inline-block;
-	padding: 3px 10px 3px 10px;
+	padding: 3px 10px;
 	border: solid #1F1F1F 2px;
 	border-radius: 5px;
-	margin-top: 12px;
-	margin-left: 0px;
-	margin-right:25px;
+    margin: 12px 25px 0px 0px;
 	background-color: #E1E1E1;
 }
 
 .nav-item:hover {
-	background-color: #B4B4B4;
+	background-color: #565656;
 }
 
 .nav-link {
@@ -117,9 +124,22 @@ body {
 	text-decoration: none;
 	font-family: "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", "DejaVu Sans", Verdana, "sans-serif";
 	font-weight: bold;
+	vertical-align: middle;
+	text-align: center;
+}
+
+.nav-icon.material-icons {
+	font-size: 24px;
+	vertical-align: middle;
+	text-align: center;
+	padding-right: 8px;
+	margin-bottom: 2px;
 }
 
 .nav-link:visited {
 	color: #1F1F1F;
 }
 
+.nav-item:hover .nav-link {
+	color: whitesmoke;
+}
