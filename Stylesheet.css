@@ -2,7 +2,7 @@
 /* CSS Document */
 
 body {
-	background-color: dimgray;
+	background-color: #BBBABA;
 }
 
 /* Content */
@@ -112,7 +112,7 @@ body {
 	border: solid #1F1F1F 2px;
 	border-radius: 5px;
     margin: 12px 25px 0px 0px;
-	background-color: #E1E1E1;
+	background-color: whitesmoke;
 }
 
 .nav-item:hover {
