@@ -5,6 +5,26 @@ body {
 	background-color: #BBBABA;
 }
 
+/* Front Page */
+
+.div-menu-icon {
+	display: inline-flex;
+	position: absolute;
+	top: 20px;
+	right: 20px;
+}
+
+.menu-icon.material-icons-round {
+	color: whitesmoke;
+	transition: transform 1.5s;
+	font-size: 3em;
+}
+
+.menu-icon:hover {
+	cursor: pointer;
+	transform: rotate(180deg);
+}
+
 /* Content */
 
 .content {
@@ -128,7 +148,7 @@ body {
 	text-align: center;
 }
 
-.nav-icon.material-icons {
+.nav-icon {
 	font-size: 24px;
 	vertical-align: middle;
 	text-align: center;
