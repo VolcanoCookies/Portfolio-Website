@@ -8,7 +8,7 @@ var id;
 
 var steps = 0;
 var fps = 60;
-var seconds = 1.5;
+var seconds = 2;
 
 var menuDisplayed = false;
 
@@ -27,16 +27,16 @@ window.addEventListener('DOMContentLoaded', function() {
 
 function rotate() {
 	clearInterval(id);
-	id = setInterval(animate, Math.floor(1000 / fps));
+	id = setInterval(animate, 1000 / fps);
 }
 
 function rotateReverse() {
 	clearInterval(id);
-	id = setInterval(resetAnimation, Math.floor(1000 / fps));
+	id = setInterval(resetAnimation, 1000 / fps);
 }
 
 function animate() {
-	if(steps > seconds * fps) {
+	if(steps >= seconds * fps) {
 		clearInterval(id);
 	} else {
 		steps++;
@@ -54,26 +54,23 @@ function resetAnimation() {
 }
 
 function transform() {
-	title.style.left = '-' + getStep(400) + 'px';
-	title.style.transform = 'rotate(-' + getStep(90) + 'deg)';
+	title.style.left = '-' + getStep(30) + '%';
 	underTitle.style.left = title.style.left;
-	underTitle.style.transform = title.style.transform;
+	underTitle.style.transform = 'rotate(-' + getStep(90) + 'deg)';
 	menu.style.width = getStep(50) + '%';
 }
 
 function getStep(max) {
-	return Math.sin(steps / seconds * fps) * Math.min(max, Math.floor(max / seconds / fps * steps));
+	return Math.sin((Math.PI / 2) * steps / (seconds * fps)) * Math.min(max, Math.floor(max / seconds / fps * steps));
 }
 
 function displayMenu() {
 	
 	if(menuDisplayed) {
 		rotateReverse();
-		//menu.style.display = 'none';
 		menuDisplayed = false;
 	} else {
 		rotate();
-		//menu.style.display = 'block';
 		menuDisplayed = true;
 	}
 	
