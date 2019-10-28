@@ -2,39 +2,6 @@
 
 @import url('https://fonts.googleapis.com/css?family=Montserrat:100');
 
-body {
-	background-color: #3a3b4c;
-}
-
-.div-title {
-	height: 95vh;
-	width: 100%;
-	margin: 0;
-	padding: 0;
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	align-items: center;
-	text-align: center;
-}
-
-.page-title {
-	padding: 0;
-	margin: 0;
-	font-family: 'Montserrat', sant-serif;
-}
-
-.page-under-title {
-	display: inline-flex;
-	color: #59B0E1;
-	position: relative;
-	top: -10px;
-	font-size: 1.1em;
-	font-weight: 600;
-	letter-spacing: .25em;
-	font-family: 'Montserrat', sant-serif;
-}
-
 @mixin glitchCopy {
 	content: attr(data-text);
 	position: absolute;
