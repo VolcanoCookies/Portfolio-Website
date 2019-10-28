@@ -62,7 +62,7 @@ function transform() {
 }
 
 function getStep(max) {
-	return Math.min(max, Math.floor(max / seconds / fps * steps));
+	return Math.sin(steps / seconds * fps) * Math.min(max, Math.floor(max / seconds / fps * steps));
 }
 
 function displayMenu() {
