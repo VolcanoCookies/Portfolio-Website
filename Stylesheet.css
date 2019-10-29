@@ -12,7 +12,7 @@ body {
 
 .menu-icon.material-icons-round {
 	color: whitesmoke;
-	transition: transform 1.5s;
+	transition: opacity .2s linear;
 	font-size: 3em;
 	display: inline-flex;
 	position: absolute;
@@ -23,7 +23,7 @@ body {
 
 .menu-icon:hover {
 	cursor: pointer;
-	transform: rotate(180deg);
+	opacity: 0.8;
 }
 
 /* Content */
@@ -169,13 +169,11 @@ body {
 	background-color: #17181F;
 	display: block;
 	height: 100%;
-	width: 0;
+	width: 100%;
 	opacity: .95;
 	overflow: hidden;
-	position: absolute;
-	top: 0;
-	right: 0;
-	backdrop-filter: blur(8px);
+	position: relative;
+	left: 100%;
 }
 
 .menu-nav-icon.material-icons-round {
@@ -249,4 +247,17 @@ body {
 .menu-icon:hover #page-under-title {
 	color: red;
 	left: -200px;
+}
+.div-menu-container {
+	display: block;
+	height: 100%;
+	width: 50%;
+	overflow: hidden;
+	position: absolute;
+	top: 0;
+	right: 0;
+}
+
+.close {
+	display: none;
 }
