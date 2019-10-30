@@ -1,10 +1,13 @@
 @charset "utf-8";
 /* CSS Document */
 
-body {
+body,html {
+	height: 100%;
 	background-color: #3a3b4c;
 	background-image: url("images/page-background.png");
-	background-size: 100%;
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
 	background-blend-mode: overlay;
 }
 
@@ -180,8 +183,9 @@ body {
 	color: whitesmoke;
 	font-size: 3em;
 	text-align: center;
-	margin: auto;
-	width: 100%;
+	display: inline-block;
+	margin: 0 auto;
+	vertical-align: middle;
 }
 
 .menu-nav-title {
@@ -200,19 +204,11 @@ body {
 .menu-nav-desc {
 	text-align: center;
 	margin: 0 auto;
-	width: auto;
+	display: inline-block;
 	font-family: 'Montserrat', sant-serif;
 	color: whitesmoke;
 	font-size: 1em;
 	font-weight: 600;
-}
-
-.div-menu-item {
-	display: block;
-	height: 100px;
-	margin: auto;
-	margin: 0 auto;
-	width: auto;
 }
 
 .div-title {
@@ -257,7 +253,13 @@ body {
 	top: 0;
 	right: 0;
 }
+.menu-list {
+	margin-top: 50px;
+	list-style: none;
+}
 
-.close {
-	display: none;
+.menu-item {
+	margin-bottom: 50px;
+	margin-left: -50px;
+	text-align: center;
 }

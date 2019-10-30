@@ -21,12 +21,10 @@ window.addEventListener('DOMContentLoaded', function() {
 	title = document.getElementById('page-title');
 	underTitle = document.getElementById('page-under-title');
 	menu = document.getElementById('menu');
-	menuIcon = document.getElementById('menu-icon');
+	menuIcon = document.getElementById('menu-icon-open');
 	menuIconClose = document.getElementById('menu-icon-close');
 	
-	document.getElementById('menu-icon').addEventListener('onmouseover', rotate());
-	
-	document.getElementById('menu-icon').addEventListener('onmouseleave', rotateReverse());
+	menuIconClose.style.display = 'none';
 	
 	console.log('DOM Loaded')
 }, false);
@@ -69,11 +67,13 @@ function transform() {
 	title.style.left = '-' + getStep(27) + '%';
 	underTitle.style.left = title.style.left;
 	underTitle.style.transform = 'rotate(-' + getStep(90) + 'deg)';
+	title.style.transform = underTitle.style.transform;
 	menu.style.left = getReverseStep(100) + '%';
 	menuIcon.style.transform = 'rotate(-' + getStep(360) + 'deg)';
 	menuIcon.style.opacity = 1 / seconds / fps * reverseSteps;
 	menuIconClose.style.transform = menuIcon.style.transform;
 	menuIconClose.style.opacity = 1 / seconds / fps * steps;
+	console.log(title.style.transform);
 }
 
 function getStep(max) {
