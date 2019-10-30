@@ -6,6 +6,8 @@ var menu;
 var menuIcon;
 var menuIconClose;
 
+var titleBox;
+
 var id;
 
 var fps = 60;
@@ -23,6 +25,8 @@ window.addEventListener('DOMContentLoaded', function() {
 	menu = document.getElementById('menu');
 	menuIcon = document.getElementById('menu-icon-open');
 	menuIconClose = document.getElementById('menu-icon-close');
+	
+	titleBox = document.getElementById('div-title');
 	
 	menuIconClose.style.display = 'none';
 	
@@ -64,16 +68,15 @@ function resetAnimation() {
 }
 
 function transform() {
-	title.style.left = '-' + getStep(27) + '%';
-	underTitle.style.left = title.style.left;
-	underTitle.style.transform = 'rotate(-' + getStep(90) + 'deg)';
-	title.style.transform = underTitle.style.transform;
+	console.log(titleBox.style.transform);
+	titleBox.style.left = (getReverseStep(25) + 25) + '%';
+	titleBox.style.transform = 'translate(-50%, -50%) rotate(' + getStep(-90) + 'deg)';
 	menu.style.left = getReverseStep(100) + '%';
 	menuIcon.style.transform = 'rotate(-' + getStep(360) + 'deg)';
 	menuIcon.style.opacity = 1 / seconds / fps * reverseSteps;
 	menuIconClose.style.transform = menuIcon.style.transform;
 	menuIconClose.style.opacity = 1 / seconds / fps * steps;
-	console.log(title.style.transform);
+	console.log(titleBox.style.transform);
 }
 
 function getStep(max) {
