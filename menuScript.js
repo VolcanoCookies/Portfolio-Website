@@ -1,7 +1,5 @@
 // JavaScript Document
 
-var title;
-var underTitle;
 var menu;
 var menuIcon;
 var menuIconClose;
@@ -20,13 +18,16 @@ var menuDisplayed = false;
 
 window.addEventListener('DOMContentLoaded', function() {
 	
-	title = document.getElementById('page-title');
-	underTitle = document.getElementById('page-under-title');
-	menu = document.getElementById('menu');
+	try {
+		titleBox = document.getElementById('div-title');
+	} catch(error) {
+		console.log('Not on front page.');
+	}
+	
 	menuIcon = document.getElementById('menu-icon-open');
 	menuIconClose = document.getElementById('menu-icon-close');
 	
-	titleBox = document.getElementById('div-title');
+	menu = document.getElementById('menu');
 	
 	menuIconClose.style.display = 'none';
 	
@@ -68,15 +69,15 @@ function resetAnimation() {
 }
 
 function transform() {
-	console.log(titleBox.style.transform);
-	titleBox.style.left = (getReverseStep(25) + 25) + '%';
-	titleBox.style.transform = 'translate(-50%, -50%) rotate(' + getStep(-90) + 'deg)';
+	if(titleBox != null){
+		titleBox.style.left = (getReverseStep(25) + 25) + '%';
+		titleBox.style.transform = 'translate(-50%, -50%) rotate(' + getStep(-90) + 'deg)';
+	}
 	menu.style.left = getReverseStep(100) + '%';
 	menuIcon.style.transform = 'rotate(-' + getStep(360) + 'deg)';
 	menuIcon.style.opacity = 1 / seconds / fps * reverseSteps;
 	menuIconClose.style.transform = menuIcon.style.transform;
 	menuIconClose.style.opacity = 1 / seconds / fps * steps;
-	console.log(titleBox.style.transform);
 }
 
 function getStep(max) {
