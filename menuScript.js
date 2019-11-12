@@ -9,7 +9,7 @@ var titleBox;
 var id;
 
 var fps = 60;
-var seconds = 1;
+var seconds = 0.75;
 
 var steps = 0;
 var reverseSteps = fps * seconds;
@@ -69,11 +69,12 @@ function resetAnimation() {
 }
 
 function transform() {
-	if(titleBox != null){
+	/*if(titleBox != null){
 		titleBox.style.left = (getReverseStep(25) + 25) + '%';
 		titleBox.style.transform = 'translate(-50%, -50%) rotate(' + getStep(-90) + 'deg)';
-	}
+	}*/
 	menu.style.left = getReverseStep(100) + '%';
+	menu.style.opacity = Math.min(1, (getStep(250) / 100)) ;
 	menuIcon.style.transform = 'rotate(-' + getStep(360) + 'deg)';
 	menuIcon.style.opacity = 1 / seconds / fps * reverseSteps;
 	menuIconClose.style.transform = menuIcon.style.transform;
