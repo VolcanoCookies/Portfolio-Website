@@ -18,6 +18,11 @@ var menuDisplayed = false;
 
 window.addEventListener('DOMContentLoaded', function() {
 	
+	load();
+	
+}, false);
+
+function load() {
 	try {
 		titleBox = document.getElementById('div-title');
 	} catch(error) {
@@ -31,8 +36,8 @@ window.addEventListener('DOMContentLoaded', function() {
 	
 	menuIconClose.style.display = 'none';
 	
-	console.log('DOM Loaded')
-}, false);
+	console.log('DOM Loaded');
+}
 
 function rotate() {
 	clearInterval(id);
