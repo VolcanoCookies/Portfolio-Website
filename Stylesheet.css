@@ -36,11 +36,10 @@ body,html {
 /* Content */
 
 .content {
-	background-color: white;
 	width: 80%;
 	height: auto;
 	margin-left: 10%;
-	margin-top: 25px;
+	margin-top: 100px;
 }
 
 .contact-text-container {
@@ -58,8 +57,8 @@ body,html {
 
 .project-list {
 	list-style-type: none;
-	magin: 0px;
-	padding: 0px;
+	magin: 0;
+	padding: 0;
 	float: left;
 }
 
@@ -285,6 +284,8 @@ body,html {
 
 .flex-container {
 	display: flex;
+	position: absolute;
+	width: 100%;
 	align-items: stretch;
 	margin: 0;
 	padding: 0;
