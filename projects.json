@@ -1,8 +1,8 @@
 {
 	"projects": [
 		{
-			"title": "Unturned NPC Creator",
-			"description": "test",
+			"title": "NPC Creator",
+			"description": "A tool to ease in the making of npcs for the game Unturned.",
 			"image": "images/BTW Icon.png",
 			"link": "https://github.com/VolcanoCookies/UnturnedNPCCreator"
 		}

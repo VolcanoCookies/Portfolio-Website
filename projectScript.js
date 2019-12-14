@@ -9,7 +9,13 @@ window.addEventListener('DOMContentLoaded', function() {
 	
 	projectContainer = document.getElementById('project-list');
 	
-	projects = JSON.parse(Get('https://raw.githubusercontent.com/VolcanoCookies/Portfolio-Website/master/projects.json'));
+	var jsonText = Get('https://raw.githubusercontent.com/VolcanoCookies/Portfolio-Website/master/projects.json');
+	
+	jsonText = jsonText.replace('(^| )\/\/.*|^$', '');
+	
+	console.log(jsonText);
+	
+	projects = JSON.parse(jsonText);
 	
 	for(i in projects.projects) {
 		
