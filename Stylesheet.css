@@ -307,6 +307,6 @@ body,html {
 	position: absolute;
 	width: 100vh;
 	height: 100vh;
-	top: 0;
-	left: 0;
+	top: 10%;
+	left: 10%;
 }
