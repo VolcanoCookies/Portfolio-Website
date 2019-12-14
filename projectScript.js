@@ -11,7 +11,10 @@ window.addEventListener('DOMContentLoaded', function() {
 	
 	var jsonText = Get('https://raw.githubusercontent.com/VolcanoCookies/Portfolio-Website/master/projects.json');
 	
-	jsonText = jsonText.replace('(^| )\/\/.*|^$', '');
+	var regex = new RegExp('(^| )\/\/.*|^$');
+	
+	jsonText = jsonText.replace(regex, '');
+	jsonText.replace();
 	
 	console.log(jsonText);
 	
