@@ -2,48 +2,31 @@
 <html>
 	<head>
 		<meta charset="utf-8">
-		<title>Portfolio: Projects</title>
+		<title>Volcano: Projects</title>
 		<link rel="stylesheet" href="Stylesheet.css">
-		<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+		<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons+Round">
+		<link href="https://fonts.googleapis.com/css?family=Montserrat:100&display=swap" rel="stylesheet">
 		<meta name="description"
 			  content="My projects">
 		<meta name="keywords"
-			  content="Websida">
+			  content="Website">
 		<meta name="author"
 			  content="Francis Gniady">
 		<meta name="viewport"
 			  content="width=device-width,
 					   initial-scale=1.0">
 		<script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+		<script src="menuScript.js"></script>
+		<script src="projectScript.js"></script>
 	</head>
 	<body>
+		
 		<div id="nav-placeholder"></div>
 		
-		<div>
-			<h1>Projects</h1>
-			<ul class="project-list">
-				<li class="project-list-item">
-					<img class="project-image" src="../Grundläggande HTML/bild.png">
-					<hr class="project-description">
-					<h2 class="project-title">Project title</h2>
-					<hr class="project-description">
-					<p class="project-description">Test description of the project that im creating, this might be quite long and should thus be contained easily under the image and title.</p>
-				</li>
-				<li class="project-list-item">
-					<img class="project-image" src="../Grundläggande HTML/bild.png">
-					<hr class="project-description">
-					<h2 class="project-title">Project title</h2>
-					<hr class="project-description">
-					<p class="project-description">Test description of the project that im creating, this might be quite long and should thus be contained easily under the image and title.</p>
-				</li>
+		<div class="project-container">
+			<ul class="project-list" id="project-list">
 			</ul>
 		</div>
-		
-		<script>
-			$(function(){
-			  $("#nav-placeholder").load("nav.html");
-			});
-		</script>
 		
 	</body>
 </html>
