@@ -28,17 +28,20 @@
 		<div id="nav-placeholder"></div>
 		
 		<div class="contact-form-container">
-			<form action="script here" class="contact-form">
+			<form method="post" action="mailto:volcanocookies@gmail.com" class="contact-form" id="contact-form">
 				
-				<p>Email Address</p>
+				<p class="contact-form-title">Email Address</p>
 				<input  type="email" name="email" value="Email" id="email-field" class="contact-form-text-field contact-form-email">
 				
+				<p class="contact-form-title">Subject</p>
 				<input type="text" name="subject" value="Subject" id="subject-field" class="contact-form-text-field contact-form-subject">
 				
-				<input type="text" required name="message" value="Message" id="message-field" class="contact-form-text-field contact-form-message">
+				<p class="contact-form-title">Message</p>
+				<textarea type="text" required name="message" id="message-field" form="contact-form" class="contact-form-text-field contact-form-message">Message</textarea>
 				
 				<input type="submit" class="contact-form-submit-button" value="Submit">
 			</form>
+			<p style="position: absolute; bottom: 10px; right: 10px;">In progress</p>
 		</div>
 		
 		<div class="content">
