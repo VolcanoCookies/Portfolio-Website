@@ -4,8 +4,6 @@ var menu;
 var menuIcon;
 var menuIconClose;
 
-var titleBox;
-
 var id;
 
 var fps = 60;
@@ -16,18 +14,13 @@ var reverseSteps = fps * seconds;
 
 var menuDisplayed = false;
 
-window.addEventListener('DOMContentLoaded', function() {
+$(window).on('ready', function() {
 	
-	load();
+	$("#nav-placeholder").load("https://raw.githubusercontent.com/VolcanoCookies/Portfolio-Website/master/nav.html", load);
 	
-}, false);
+});
 
 function load() {
-	try {
-		titleBox = document.getElementById('div-title');
-	} catch(error) {
-		console.log('Not on front page.');
-	}
 	
 	menuIcon = document.getElementById('menu-icon-open');
 	menuIconClose = document.getElementById('menu-icon-close');
@@ -74,10 +67,6 @@ function resetAnimation() {
 }
 
 function transform() {
-	/*if(titleBox != null){
-		titleBox.style.left = (getReverseStep(25) + 25) + '%';
-		titleBox.style.transform = 'translate(-50%, -50%) rotate(' + getStep(-90) + 'deg)';
-	}*/
 	menu.style.left = getReverseStep(100) + '%';
 	menu.style.opacity = Math.min(1, (getStep(250) / 100)) ;
 	menuIcon.style.transform = 'rotate(-' + getStep(360) + 'deg)';
