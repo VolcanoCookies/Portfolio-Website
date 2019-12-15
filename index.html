@@ -2,7 +2,7 @@
 <html>
 	<head>
 		<meta charset="utf-8">
-		<title>Volcano</title>
+		<title>Volcano: Portfolio</title>
 		<link rel="stylesheet" href="Stylesheet.css">
 		<link rel="stylesheet" href="StylesheetGlitch.scss">
 		<link rel="stylesheet" href="StylesheetGlitch.css">
@@ -11,45 +11,18 @@
 		<meta name="description"
 			  content="Portfolio">
 		<meta name="keywords"
-			  content="Websida">
+			  content="Website">
 		<meta name="author"
 			  content="Volcano">
 		<meta name="viewport"
 			  content="width=device-width,
 					   initial-scale=1.0">
+		<script src="https://code.jquery.com/jquery-1.10.2.js"></script>
 		<script src="menuScript.js"></script>
 	</head>
 	<body>
 		
-		<div class="flex-container">
-			<div class="div-menu-container">
-				
-				<em class="material-icons-round menu-icon" onClick="displayMenu()" id="menu-icon-open">menu</em>
-				
-				<em class="material-icons-round menu-icon" id="menu-icon-close" onClick="displayMenu()">close</em>
-				
-				<div class="div-menu" id="menu">
-					
-					<ul class="menu-list">
-						<li class="menu-item">
-							<a class="a-menu-item" href="projects.html">
-								<i class="material-icons-round menu-nav-icon">dns</i>
-								<p class="menu-nav-desc">Projects</p>
-							</a>
-						</li>
-						
-						<li class="menu-item">
-							<a class="a-menu-item">
-								<i class="material-icons-round menu-nav-icon">person</i>
-								<p class="menu-nav-desc">Affiliates</p>
-							</a>
-						</li>
-						
-					</ul>
-				</div>
-			</div>
-		</div>
-		
+		<div id="nav-placeholder"></div>
 		
 		<div class="div-title" id="div-title">
 			
@@ -58,12 +31,6 @@
 			<p class="page-under-title" id="page-under-title">Freelance Developer</p>
 			
 		</div>
-		
-		<script>
-			$(function(){
-			  $("#menu-placeholder").load("nav.html");
-			});
-		</script>
 		
 </body>
 </html>
