@@ -6,8 +6,8 @@ body,html {
 	margin: 0;
 	padding: 0;
 	overflow: hidden;
-	background-color: #3a3b4c;
-	background-image: url("images/page-background.png");
+	background-color: #2d132c;
+	/*background-image: url("images/page-background.png");*/
 	background-size: cover;
 	background-position: center;
 	background-repeat: no-repeat;
@@ -54,14 +54,8 @@ body,html {
 	width: 100%;
 	height: 100%;
 	list-style-type: none;
-<<<<<<< HEAD
-	magin: 0;
-	padding: 0;
-	float: left;
-=======
 	margin: 5%;
 	padding: 0px;
->>>>>>> origin/master
 }
 
 .project-list-item {
@@ -251,7 +245,7 @@ body,html {
 .div-menu-container {
 	display: block;
 	align-self: flex-start;
-	order: 1;
+	z-index: 100;
 	width: 100%;
 	overflow: hidden;
 }
@@ -293,7 +287,6 @@ body,html {
 	align-items: stretch;
 	margin: 0;
 	padding: 0;
-	height: 100vh;
 }
 
 .project-container {
@@ -306,11 +299,12 @@ body,html {
 
 .content {
 	display: flex;
-	flex-direction: column:
+	flex-direction: row;
 }
 
 .contacts {
-	background-color: rgba(13,13,13,0.90);
+	
+	background-color: rgba(105,15,44,0.90);
 	margin: 100px 150px 0 25px;
 	flex-grow: 1;
 }
