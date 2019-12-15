@@ -128,7 +128,6 @@ body,html {
 /* Navbar */
 
 .nav-bar {
-	background-color: #FF4447;
 	display: block;
 	height: 58px;
 }
@@ -311,7 +310,7 @@ body,html {
 }
 
 .contacts {
-	background-color: white;
+	background-color: rgba(13,13,13,0.90);
 	margin: 100px 150px 0 25px;
 	flex-grow: 1;
 }

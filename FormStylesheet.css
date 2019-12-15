@@ -6,9 +6,7 @@
 	display: flex;
 	flex-direction: column;
 	margin: 100px 25px auto 150px;
-	border: 1px black solid;
-	border-radius: 4px;
-	background-color: rgba(35,35,35,0.80);
+	background-color: rgba(35,32,32,0.95);
 	flex-grow: 1;
 }
 
@@ -20,11 +18,11 @@
 	padding: 5px 10px;
 	font-family: 'Montserrat', sant-serif;
 	font-size: 1em;
-	color: #ABABAB;
+	color: #3a3535;
 	font-weight: 1000;
 	width: 90%;
-	border-radius: 3px;
 	border: 1px solid #626262;
+	background-color: #f4f4f4;
 }
 
 
@@ -42,12 +40,13 @@
 }
 
 .contact-form-title {
-	width: 92%;
+	width: 95%;
 	padding: 0;
 	margin: 0 auto -10px;
 	font-family: 'Montserrat', sant-serif;
+	color: #f4f4f4;
 	font-weight: 1000;
-	
+	user-select: none;
 }
 
 .contact-form-submit-button {
@@ -64,14 +63,15 @@
 	background-color: #85E956;
 }
 
-.contact-directly {
+.contact-h2 {
 	font-family: 'Open Sans', sans-serif;
-	color: white;
+	color: #ff7315;
 	display: inline;
 	width: 100%;
 	font-size: 3.5em;
 	font-weight: 800;
 	position: relative;
 	padding: 0;
-	margin: 25px 0 0 25px;;
+	margin: 25px 0 0 25px;
+	user-select: none;
 }
