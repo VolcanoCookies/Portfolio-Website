@@ -7,6 +7,7 @@
 		<link rel="stylesheet" href="Stylesheet.css">
 		<link rel="stylesheet" href="StylesheetGlitch.scss">
 		<link rel="stylesheet" href="StylesheetGlitch.css">
+		<link rel="stylesheet" href="FormStylesheet.css">
 		<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons|Material+Icons+Round">
 		<link href="https://fonts.googleapis.com/css?family=Montserrat:100&display=swap" rel="stylesheet">
 		<meta name="description"
@@ -20,10 +21,25 @@
 					   initial-scale=1.0">
 		<script src="https://code.jquery.com/jquery-1.10.2.js"></script>
 		<script src="menuScript.js"></script>
+		<script src="formScript.js"></script>
 	</head>
 	<body>
 		
 		<div id="nav-placeholder"></div>
+		
+		<div class="contact-form-container">
+			<form action="script here" class="contact-form">
+				
+				<p>Email Address</p>
+				<input  type="email" name="email" value="Email" id="email-field" class="contact-form-text-field contact-form-email">
+				
+				<input type="text" name="subject" value="Subject" id="subject-field" class="contact-form-text-field contact-form-subject">
+				
+				<input type="text" required name="message" value="Message" id="message-field" class="contact-form-text-field contact-form-message">
+				
+				<input type="submit" class="contact-form-submit-button" value="Submit">
+			</form>
+		</div>
 		
 		<div class="content">
 			<div class="contact-text-container">
