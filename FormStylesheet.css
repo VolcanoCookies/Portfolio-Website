@@ -4,12 +4,12 @@
 
 .contact-form-container {
 	display: flex;
-	position: relative;
-	max-width: 80%;
-	margin: 100px auto;
+	flex-direction: column;
+	margin: 100px 25px auto 150px;
 	border: 1px black solid;
 	border-radius: 4px;
-	background-color: whitesmoke;
+	background-color: rgba(35,35,35,0.80);
+	flex-grow: 1;
 }
 
 .contact-form-text-field {
@@ -62,4 +62,16 @@
 
 .contact-form-submit-button:hover {
 	background-color: #85E956;
+}
+
+.contact-directly {
+	font-family: 'Open Sans', sans-serif;
+	color: white;
+	display: inline;
+	width: 100%;
+	font-size: 3.5em;
+	font-weight: 800;
+	position: relative;
+	padding: 0;
+	margin: 25px 0 0 25px;;
 }
