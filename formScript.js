@@ -21,7 +21,7 @@ $(window).on('load', function() {
 		
 		if(field.value.trim() == '') {
 			field.value = 'Email';
-			field.style.color = '#ABABAB';
+			field.style.color = '#2d132c';
 		}
 		
 	});
@@ -44,7 +44,7 @@ $(window).on('load', function() {
 		
 		if(field.value.trim() == '') {
 			field.value = 'Subject';
-			field.style.color = '#ABABAB';
+			field.style.color = '#2d132c';
 		}
 		
 	});
@@ -67,7 +67,7 @@ $(window).on('load', function() {
 		
 		if(field.value.trim() == '') {
 			field.value = 'Message';
-			field.style.color = '#ABABAB';
+			field.style.color = '#2d132c';
 		}
 		
 	});

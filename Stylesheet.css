@@ -1,8 +1,7 @@
 @charset "utf-8";
 /* CSS Document */
 
-@import url('https://fonts.googleapis.com/css?family=Nunito|Raleway');
-
+@import url('https://fonts.googleapis.com/css?family=Nunito|Raleway|Questrial');
 body,html {
 	height: 100vh;
 	margin: 0;
