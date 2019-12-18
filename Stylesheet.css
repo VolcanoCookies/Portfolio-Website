@@ -305,7 +305,6 @@ body,html {
 }
 
 .contacts {
-	
 	background-color: rgba(105,15,44,0.90);
 	margin: 100px 150px 0 25px;
 	flex-grow: 1;
@@ -314,8 +313,10 @@ body,html {
 .contacts-title {
 	font-family: 'Open Sans', sans-serif;
 	font-weight: 800;
+	color: whitesmoke;
 	margin: 0;
-	font-size: 2em;
+	font-size: 1.25em;
+	user-select: none;
 	grid-area: title;
 }
 
@@ -325,22 +326,36 @@ body,html {
 		'image title'
 		'image subtitle'
 		'image link';
-	}
+	margin: 50px auto 0 100px;
+	max-height: 100px;
+	float: left;
+}
 
 .contacts-subtitle {
 	font-family: 'Open Sans', sans-serif;
+	color: whitesmoke;
 	margin: 0;
-	font-size: 1.5em;
+	font-size: 1em;
+	user-select: none;
 	grid-area: subtitle;
 }
 
 .contacts-link {
 	font-family: 'Open Sans', sans-serif;
 	grid-area: link;
+	color: whitesmoke;
+}
+
+.contacts-link:hover {
+	color: gray;
+}
+
+.contacts-link:visited {
+	color: whitesmoke;
 }
 
 .contacts-image {
-	max-height: 200px;
-	max-width: 200px;
+	max-height: 100px;
+	max-width: 100px;
 	grid-area: image;
 }

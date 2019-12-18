@@ -65,7 +65,7 @@
 .contact-h2 {
 	font-family: Questrial;
 	color: #FFBE23;
-	display: inline;
+	display: block;
 	width: 100%;
 	font-size: 3.5em;
 	position: relative;
