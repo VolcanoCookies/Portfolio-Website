@@ -13,6 +13,7 @@ body,html {
 	background-position: center;
 	background-repeat: no-repeat;
 	background-blend-mode: overlay;
+	background-color: red;
 }
 
 /* Front Page */
