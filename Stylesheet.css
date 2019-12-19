@@ -179,8 +179,9 @@ body,html {
 	background-color: #0D0D0D;
 	border: solid 1px #1F1F1F;
 	opacity: .90;
-	position: relative;
-	left: 100%;
+	position: absolute;
+	flex-grow: 1;
+	top: -100%;
 	z-index: 10;
 }
 
