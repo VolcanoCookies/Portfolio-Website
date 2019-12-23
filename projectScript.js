@@ -3,11 +3,13 @@
 var projectContainer;
 var projects;
 
+var template = '<li class="project-list-item"><a class="project-item-link" href="project_link"><img class="project-image" src="project_image" alt="Project Image Unavailable"><hr class="project-description"><h2 class="project-title">project_title</h2><hr class="project-description"><p class="project-description">project_description</p></a></li>';
+
 window.addEventListener('DOMContentLoaded', function() {
 	
 	projectContainer = document.getElementById('project-list');
 	
-	var template = Get('https://raw.githubusercontent.com/VolcanoCookies/Portfolio-Website/static-navbar/projecTtemplate.html');
+	var template = Get('https://raw.githubusercontent.com/VolcanoCookies/Portfolio-Website/static-navbar/projectTemplate.html');
 	
 	var jsonText = Get('https://raw.githubusercontent.com/VolcanoCookies/Portfolio-Website/static-navbar/projects.json');
 	
