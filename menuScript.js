@@ -67,7 +67,7 @@ function resetAnimation() {
 }
 
 function transform() {
-	menu.style.top = getReverseStep(100) + '%';
+	menu.style.left = getReverseStep(100) + '%';
 	menu.style.opacity = Math.min(1, (getStep(250) / 100)) ;
 	menuIcon.style.transform = 'rotate(-' + getStep(360) + 'deg)';
 	menuIcon.style.opacity = 1 / seconds / fps * reverseSteps;
