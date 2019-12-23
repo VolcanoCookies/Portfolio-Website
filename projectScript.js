@@ -9,7 +9,9 @@ window.addEventListener('DOMContentLoaded', function() {
 	
 	projectContainer = document.getElementById('project-list');
 	
-	var jsonText = Get('https://raw.githubusercontent.com/VolcanoCookies/Portfolio-Website/master/projects.json');
+	var template = Get('https://raw.githubusercontent.com/VolcanoCookies/Portfolio-Website/static-navbar/projecTtemplate.html');
+	
+	var jsonText = Get('https://raw.githubusercontent.com/VolcanoCookies/Portfolio-Website/static-navbar/projects.json');
 	
 	var regex = new RegExp('(^| )\/\/.*|^$');
 	
