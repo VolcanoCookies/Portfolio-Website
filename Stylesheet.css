@@ -51,31 +51,21 @@ body,html {
 
 .project-list {
 	display: flex;
-	width: 100%;
-	height: 100%;
+	flex-wrap: wrap;
+	justify-content: center;
 	list-style-type: none;
-<<<<<<< HEAD
-	magin: 0;
-	padding: 0;
-	float: left;
-=======
-	margin: 5%;
-	padding: 0px;
->>>>>>> origin/master
 }
 
 .project-list-item {
-	background-color: rgba(41,41,41,0.90);
+	background-color: #111111;
 	border-radius: 2px;
 	display: inline-block;
 	border: whitesmoke solid 1px;
-	margin: -1px 9px;
+	margin: 10px;
 	height: 250px;
 	width: 250px;
 	vertical-align: middle;
 	overflow: hidden;
-	flex-direction: row;
-	flex-wrap: wrap;
 }
 
 .project-image {
@@ -93,7 +83,7 @@ body,html {
 	margin: 10px;
 	position: relative;
 	top: 0px;
-	transition: top .5s;
+	transition: top .25s;
 	transition-timing-function: ease-out;
 	color: whitesmoke;
 }
@@ -106,7 +96,7 @@ body,html {
 	text-align: center;
 	position: relative;
 	top: 0px;
-	transition: top .5s;
+	transition: top .25s;
 	transition-timing-function: ease-out;
 }
 
@@ -117,7 +107,7 @@ body,html {
 
 .project-list-item:hover .project-image {
 	display: inline;
-	opacity: 0.1;
+	opacity: 0.05;
 }
 
 .project-list-item:hover .project-title {
@@ -185,7 +175,6 @@ body,html {
 	border: solid 1px #1F1F1F;
 	opacity: .90;
 	position: relative;
-	left: 100%;
 	z-index: 10;
 }
 
@@ -206,12 +195,12 @@ body,html {
 	margin: auto;
 	display: inline-block;
 	position: relative;
-	top: 5px;
 	font-family: 'Montserrat', sant-serif;
 	color: whitesmoke;
 	font-size: 1.5em;
 	font-weight: 600;
 	transition: opacity .2s;
+	text-decoration: underline
 }
 
 .div-title {
@@ -229,7 +218,7 @@ body,html {
 .page-title {
 	padding: 0;
 	margin: 0;
-	font-family: 'Montserrat', sant-serif; 
+	font-family: 'Montserrat', sant-serif;
 }
 
 .page-under-title {
@@ -258,6 +247,7 @@ body,html {
 .menu-list {
 	text-align: center;
 	list-style: none;
+	padding: 0;
 }
 
 .menu-item {
@@ -297,11 +287,7 @@ body,html {
 }
 
 .project-container {
-	position: absolute;
-	width: 100vh;
-	height: 100vh;
-	top: 10%;
-	left: 10%;
+	margin: 5% 5%;
 }
 
 .content {
