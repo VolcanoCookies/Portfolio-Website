@@ -60,7 +60,7 @@ body,html {
 }
 
 .project-list-item {
-	background-color: rgba(41,41,41,0.90);
+	background-color: #111111;
 	border-radius: 2px;
 	display: inline-block;
 	border: whitesmoke solid 1px;
@@ -88,7 +88,7 @@ body,html {
 	margin: 10px;
 	position: relative;
 	top: 0px;
-	transition: top .5s;
+	transition: top .25s;
 	transition-timing-function: ease-out;
 	color: whitesmoke;
 }
@@ -101,7 +101,7 @@ body,html {
 	text-align: center;
 	position: relative;
 	top: 0px;
-	transition: top .5s;
+	transition: top .25s;
 	transition-timing-function: ease-out;
 }
 
@@ -112,7 +112,7 @@ body,html {
 
 .project-list-item:hover .project-image {
 	display: inline;
-	opacity: 0.1;
+	opacity: 0.05;
 }
 
 .project-list-item:hover .project-title {
@@ -200,12 +200,12 @@ body,html {
 	margin: auto;
 	display: inline-block;
 	position: relative;
-	top: 5px;
 	font-family: 'Montserrat', sant-serif;
 	color: whitesmoke;
 	font-size: 1.5em;
 	font-weight: 600;
 	transition: opacity .2s;
+	text-decoration: underline
 }
 
 .div-title {
@@ -223,7 +223,7 @@ body,html {
 .page-title {
 	padding: 0;
 	margin: 0;
-	font-family: 'Montserrat', sant-serif; 
+	font-family: 'Montserrat', sant-serif;
 }
 
 .page-under-title {
@@ -250,8 +250,6 @@ body,html {
 	overflow: hidden;
 }
 .menu-list {
-	position: relative;
-	top: -5px;
 	text-align: center;
 	list-style: none;
 }
