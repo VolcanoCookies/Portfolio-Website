@@ -302,7 +302,6 @@ body,html {
 }
 
 .contacts-title {
-	font-family: 'Open Sans', sans-serif;
 	font-weight: 800;
 	margin: 0;
 	font-size: 2em;
@@ -310,11 +309,9 @@ body,html {
 }
 
 .contact-entry {
-	display: grid;
-	grid-template-areas: 
-		'image title'
-		'image subtitle'
-		'image link';
+	border: solid 1px whitesmoke;
+	max-width: 80%;
+	margin: auto auto 15px;
 	}
 
 .contacts-subtitle {
@@ -326,11 +323,20 @@ body,html {
 
 .contacts-link {
 	font-family: 'Open Sans', sans-serif;
-	grid-area: link;
+	display: grid;
+	grid-template-areas: 
+		'image title'
+		'image subtitle';
+	color: whitesmoke;
+	text-decoration: none;
+}
+
+.contacts-link:hover {
+	color: darkgray;
 }
 
 .contacts-image {
-	max-height: 200px;
-	max-width: 200px;
+	max-height: 100px;
+	max-width: 100px;
 	grid-area: image;
 }
