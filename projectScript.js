@@ -3,60 +3,85 @@
 var projectContainer;
 var projects;
 
-var template = '<li class="project-list-item"><a class="project-item-link" href="project_link"><img class="project-image" src="project_image" alt="Project Image Unavailable"><hr class="project-description"><h2 class="project-title">project_title</h2><hr class="project-description"><p class="project-description">project_description</p></a></li>';
+var template;
+var jsonText;
 
-window.addEventListener('DOMContentLoaded', function() {
-	
+var urls = [
+	'https://raw.githubusercontent.com/VolcanoCookies/Portfolio-Website/master/templates/projectTemplate.html',
+	'https://raw.githubusercontent.com/VolcanoCookies/Portfolio-Website/master/projects.json'
+];
+
+urls.forEach(url => {
+	getAsync(url, context => response(context, url));
+});
+
+function response(responseText, url) {
+	switch (url) {
+		case urls[0]:
+			template = responseText;
+			callsProcessed++;
+			break;
+		case urls[1]:
+			jsonText = responseText;
+			callsProcessed++;
+			break;
+		default:
+			break;
+	}
+
+	if (callsProcessed === urls.length) populateList();
+}
+
+$(window).on('ready', function() {
 	projectContainer = document.getElementById('project-list');
-	
-	var template = Get('https://raw.githubusercontent.com/VolcanoCookies/Portfolio-Website/static-navbar/projectTemplate.html');
-	
-	var jsonText = Get('https://raw.githubusercontent.com/VolcanoCookies/Portfolio-Website/static-navbar/projects.json');
-	
-	var regex = new RegExp('(^| )\/\/.*|^$');
-	
+});
+
+function populateList() {
+	var regex = new RegExp('(^| )//.*|^$');
+
 	jsonText = jsonText.replace(regex, '');
 	jsonText.replace();
-	
+
 	console.log(jsonText);
-	
+
 	projects = JSON.parse(jsonText);
-	
-	for(i in projects.projects) {
-		
+
+	for (i in projects.projects) {
 		var project = projects.projects[i];
-		
+
 		createProject(project);
 	}
-	
-}, false);
+}
 
-function Get(yourUrl){
-	var Httpreq = new XMLHttpRequest(); // a new request
-	Httpreq.open("GET",yourUrl,false);
-	Httpreq.send(null);
-	return Httpreq.responseText;          
+function getAsync(url, callback) {
+	var xmlHttp = new XMLHttpRequest();
+	xmlHttp.onreadystatechange = function() {
+		if (xmlHttp.readyState == 4 && xmlHttp.status == 200)
+			callback(xmlHttp.responseText);
+	};
+	xmlHttp.open('GET', url, true); // true for asynchronous
+	xmlHttp.send(null);
 }
 
 function createProject(project) {
-	
 	var title = project.title;
 	var description = project.description;
 	var image = project.image;
 	var link = project.link;
-	
+
 	var element = document.createElement('project');
 	var html = template.trim();
 	html = html.replace('project_title', title);
 	html = html.replace('project_description', description);
 	html = html.replace('project_image', image);
 	html = html.replace('project_link', link);
-	
+
 	element.innerHTML = html;
-	
-	console.log("Title: " + title + "\nDesciption: " + description + "\nImage: " + image);
+
+	console.log(
+		'Title: ' + title + '\nDesciption: ' + description + '\nImage: ' + image
+	);
 	console.log(element.innerHTML);
-	
+
 	projectContainer.innerHTML += element.innerHTML;
-	
 }
