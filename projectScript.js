@@ -6,6 +6,8 @@ var projects;
 var template;
 var jsonText;
 
+var callsProcessed = 0;
+
 var urls = [
 	'https://raw.githubusercontent.com/VolcanoCookies/Portfolio-Website/master/templates/projectTemplate.html',
 	'https://raw.githubusercontent.com/VolcanoCookies/Portfolio-Website/master/projects.json'

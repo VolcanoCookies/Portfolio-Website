@@ -11,11 +11,11 @@
 	height: 100%;
 }
 
-.glitch {
+.glitch-title {
 	position: relative;
 	color: whitesmoke;
 	font-size: 3em;
-	letter-spacing: .25em;
+	letter-spacing: 0.25em;
 	animation: glitch-skew 1s infinite linear alternate-reverse;
 	&::before {
 		@include glitchCopy;
@@ -24,7 +24,7 @@
 		clip: rect(44px, 450px, 56px, 0);
 		animation: glitch-anim 5s infinite linear alternate-reverse;
 	}
-	
+
 	&::after {
 		@include glitchCopy;
 		left: -2px;
@@ -37,7 +37,7 @@
 	$steps: 20;
 	@for $i from 0 through $steps {
 		#{percentage($i*(1/$steps))} {
-			clip: rect(random(100)+px, 9999px, random(100)+px, 0);
+			clip: rect(random(100) + px, 9999px, random(100) + px, 0);
 			transform: skew((random(100) / 100) + deg);
 		}
 	}
@@ -47,7 +47,7 @@
 	$steps: 20;
 	@for $i from 0 through $steps {
 		#{percentage($i*(1/$steps))} {
-			clip: rect(random(100)+px, 9999px, random(100)+px, 0);
+			clip: rect(random(100) + px, 9999px, random(100) + px, 0);
 			transform: skew((random(100) / 100) + deg);
 		}
 	}
